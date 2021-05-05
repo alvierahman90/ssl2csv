@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+data="$(head -n -1 "$1" | grep 'AD' | cut -d= -f2 | cut -d, -f1)"
+interval="$(($(head -n -1 "$1" | grep 'Interval' | cut -d= -f2)/10000000))"
+cumint=0
+
+echo $interval
+
+for datapoint in $data
+do
+	echo $datapoint,$cumint
+	cumint=$(($cumint + $interval))
+done
