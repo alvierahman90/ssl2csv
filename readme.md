@@ -2,6 +2,8 @@
 
 Convert [EasySense](https://store.data-harvest.co.uk/easysense) data files to csv.
 
+Also available as a [webpage](https://alra.uk/tidbits/ssl2csv).
+
 ## usage
 
 ```
